@@ -1,3 +1,7 @@
 # Column-Design-Application-
 This application started off as a homework assignment in my Advaced Design of Concrete Structures course that I took while studying for my Master's Degree. The task of
-assignment was to plot the intereaction diagram for a reinforced concrete column 
+the assignment was to plot the intereaction diagram for a reinforced concrete column using the building code provisions of the ACI 318-14. Initially, the program was only able to do just that using matplotlib. After I submitted the assignment, I took it upon myself to continue with the application by integrating a GUI using Python's Tkinter package. 
+
+The program can currently plot the interaction diagram for both rectangular and circular columns. However, it does not have bi-axial capabilities. The script only considers moment applied in one direction. In addition, there is also a second canvas that previews the layout of the column; this way the user can get a visual representation of what they are looking too design. 
+
+The procedural methodology behind the actual script itself relies upon the iteration of the neutral axis location of the column. At each location, the maximum allowable tensile and compressive force that the rebar and concrete can withstand is determined. Then, these forces are summed together to get the axial capacity of the column. The same holds true for the bending capacity, except each force vector is multiplied by its respective distance to the neutral axis before the values are summed. For detailed example calculations, please visit https://structurepoint.org/publication/design-examples.asp?soft=columnde.  
